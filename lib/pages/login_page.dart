@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/utils/routes.dart';
 
+// ignore: camel_case_types
 class loginPage extends StatefulWidget {
   const loginPage({Key? key}) : super(key: key);
 
@@ -8,6 +9,7 @@ class loginPage extends StatefulWidget {
   State<loginPage> createState() => _loginPageState();
 }
 
+// ignore: camel_case_types
 class _loginPageState extends State<loginPage> {
   String name = "";
   bool changeButton = false;
@@ -20,7 +22,7 @@ class _loginPageState extends State<loginPage> {
         changeButton = true;
       });
 
-      await Future.delayed(Duration(seconds: 2));
+      await Future.delayed(const Duration(seconds: 2));
       await Navigator.pushNamed(context, MyRoutes.homeRoutes);
       setState(() {
         changeButton = false;
@@ -47,7 +49,8 @@ class _loginPageState extends State<loginPage> {
                 ),
                 Text(
                   "Welcome  $name",
-                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 28, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(
                   height: 20.0,
@@ -91,7 +94,7 @@ class _loginPageState extends State<loginPage> {
                       InkWell(
                         onTap: () => moveToHome(context),
                         child: AnimatedContainer(
-                          duration: Duration(seconds: 2),
+                          duration: const Duration(seconds: 2),
                           width: changeButton ? 50 : 150,
                           height: 50,
                           alignment: Alignment.center,
