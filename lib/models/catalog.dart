@@ -1,5 +1,18 @@
+class CatalogModel {
+  // ignore: non_constant_identifier_names
+  static final Items = [
+    Item(
+        id: 01,
+        desc: "Apple new model",
+        price: 1120,
+        color: "#33505a",
+        name: "IPhone 12",
+        image: "assets/images/i12.png")
+  ];
+}
+
 class Item {
-  final String id;
+  final int id;
   final String name;
   final String desc;
   final num price;
@@ -14,14 +27,3 @@ class Item {
       required this.color,
       required this.image});
 }
-
-final products = [
-  Item(
-      id: "001",
-      desc: "Apple new model",
-      price: 1120,
-      color: "#33505a",
-      name: "IPhone 12",
-      image:
-          " https://images.priceoye.pk/apple-iphone-12-pakistan-priceoye-3p8na-270x270.webp")
-];
