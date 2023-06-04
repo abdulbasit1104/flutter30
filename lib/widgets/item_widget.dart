@@ -18,7 +18,7 @@ class ItemWidget extends StatelessWidget {
           // ignore: avoid_print
           print("${item.name} pressed");
         },
-        leading: Image.asset(item.image),
+        leading: Image.network(item.image),
         title: Text(item.name),
         subtitle: Text(item.desc),
         trailing: Text(
